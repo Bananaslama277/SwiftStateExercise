@@ -48,7 +48,7 @@ struct ContentView: View {
                             Text(letters[letterIndex])
                             Button {
                                 letterIndex += 1
-                                if (letterIndex > 24){
+                                if (letterIndex > 25){
                                     letterIndex = 0
                                 }
                             } label : {
