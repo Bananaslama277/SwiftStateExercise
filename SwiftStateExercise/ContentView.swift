@@ -8,12 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var numOne = 0
+    @State var numTwo = 2
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Spacer()
+
+                        HStack {
+                            Text("ONE")
+                            Text(String(numOne))
+                            Button("ADD ONE"){
+                                numOne += 1
+                            }
+                        }
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Text("TWO")
+                            Text(String(numTwo))
+                            Button {
+                                numTwo *= numTwo
+                            } label: {
+                                Text("SQUARE")
+                            }
+                        }
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Text("BONUS")
+
+                        }
+                        
+                        Spacer()
         }
         .padding()
     }
